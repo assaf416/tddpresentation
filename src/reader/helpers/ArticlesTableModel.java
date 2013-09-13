@@ -1,12 +1,10 @@
 package reader.helpers;
 
 
-import java.util.ArrayList;
 import java.util.List;
-
 import reader.model.*;
-
 import javax.swing.table.AbstractTableModel;
+
 
 @SuppressWarnings("serial")
 public class ArticlesTableModel extends AbstractTableModel {
@@ -17,12 +15,12 @@ public class ArticlesTableModel extends AbstractTableModel {
 	private Object[][] data = {}; // ...//same as before...
 
 	public ArticlesTableModel( List<FeedMessage> data){
-		Object[][] ret = {};
+		Object[][] ret= {};
 		FeedMessage msg;
 		System.out.println("UUUUUU ======== UUUUUUU");
 		for (int i=1;i<10;i++){
 			msg = data.get(i);
-			ret[i] = new String[]{msg.getAuthor(),msg.getTitle(),msg.getLink()};
+			ret[i][0] = new String[]{msg.getAuthor(),msg.getTitle(),msg.getLink()};
 			
 			
 			System.out.println("MESSAGE:");
